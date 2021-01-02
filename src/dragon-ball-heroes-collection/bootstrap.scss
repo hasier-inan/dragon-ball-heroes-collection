@@ -1,0 +1,29 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/modal";
+
+.modal {
+    &-content {
+        border: 0;
+
+        .close {
+            margin: 0;
+            padding: 0;
+            width: 2em;
+            height: 2em;
+            border-radius: 1em;
+            font-size: 1em;
+            border: 0;
+            cursor: pointer;
+
+            .sr-only {
+                display: none;
+            }
+        }
+
+    }
+
+
+}
