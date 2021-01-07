@@ -1,6 +1,20 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,700,800);
+@import "./constants";
 @import "./bootstrap";
 
-body{
-    font-family: 'Raleway', Arial, sans-serif;
+body {
+    font-family: 'Raleway', Arial, sans-serif !important;
+    background: $background-color !important;
+
+    .bm-menu {
+        background: $menu-background-color;
+    }
+
+    .collection-items__item {
+        border-radius: 10px;
+
+        .item__image{
+            border-radius: 10px;
+        }
+    }
 }

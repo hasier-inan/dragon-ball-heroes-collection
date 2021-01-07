@@ -7,6 +7,7 @@ import CollectionItems from "collection-items";
 import {CATEGORIES} from "./categories";
 import _map from 'lodash/map';
 import _merge from 'lodash/merge';
+import Card from "./card";
 
 class DragonBallHeroesCollection extends React.Component {
 
@@ -17,7 +18,7 @@ class DragonBallHeroesCollection extends React.Component {
             displayModal: false,
             categories: CATEGORIES,
             cards: {},
-        };
+        }
 
         this.loadAllCards();
     }
@@ -45,17 +46,23 @@ class DragonBallHeroesCollection extends React.Component {
     renderModal() {
         const {
             displayModal,
+            card,
         } = this.state;
 
-        return (<Modal show={displayModal} onHide={this.closeModal.bind(this)}>
-            <Modal.Header closeButton>
-                <Modal.Title></Modal.Title>
-            </Modal.Header>
-            <Modal.Body></Modal.Body>
-            <Modal.Footer>
-
-            </Modal.Footer>
-        </Modal>);
+        if (card) {
+            return (<Modal show={displayModal} onHide={this.closeModal.bind(this)}>
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                        <div className={'card-title'}>{card.title}</div>
+                        <div className={'card-title'}>{card.character}</div>
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <Card {...card}/>
+                </Modal.Body>
+                <Modal.Footer>{card.rarity}</Modal.Footer>
+            </Modal>);
+        }
     }
 
     renderCollectionItems() {
@@ -67,8 +74,12 @@ class DragonBallHeroesCollection extends React.Component {
         return (<CollectionItems
             items={cards}
             categories={categories}
-            onItemClick={(item) => {
-                console.log(item)
+            defaultCategory={categories[0].id}
+            onItemClick={(card) => {
+                this.setState({
+                    displayModal: true,
+                    card,
+                });
             }}
             defaultWidth={172}
             defaultHeight={250}

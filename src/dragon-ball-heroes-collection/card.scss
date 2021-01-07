@@ -1,0 +1,175 @@
+@import "./constants";
+
+$card-status-width: 75px;
+$card-status-hp-color: #0C6C3C;
+$card-status-hp-color-secondary: #5C9544;
+$card-status-power-color: #C21125;
+$card-status-power-color-secondary: #CA6600;
+$card-status-guard-color: #b07810;
+$card-status-guard-color-secondary: #EAB00F;
+
+.modal {
+
+    &-header {
+        border-bottom: 1px solid $modal-background-separator;
+        padding: .5rem .5rem;
+
+        button {
+            transition: all .2s ease;
+            background-color: $modal-close-background-color;
+
+            &:focus {
+                outline: none;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: $modal-color-primary;
+            }
+        }
+    }
+
+    &-title {
+        text-align: center;
+        width: 100%;
+        color: $modal-color-primary;
+        padding-left: 30px;
+
+        .card-title {
+
+        }
+    }
+
+    &-content {
+        background-color: $modal-background-color;
+        color: $modal-color-primary;
+    }
+
+    &-body {
+        border-bottom: 1px solid $modal-background-separator;
+    }
+
+    &-footer {
+        border: 0;
+        padding: 0.25rem;
+        color: $modal-color-primary;
+        text-align: center;
+        display: block;
+    }
+}
+
+.card {
+    &__image {
+        padding: 0;
+        text-align: center;
+    }
+
+    &__details {
+
+        .card-status {
+            text-align: center;
+            margin: 0 4px;
+            color: $menu-background-color;
+            font-weight: bold;
+
+            &--hp {
+                background: linear-gradient($card-status-hp-color, $card-status-hp-color-secondary);
+            }
+
+            &--power {
+                background: linear-gradient($card-status-power-color, $card-status-power-color-secondary);
+            }
+
+            &--guard {
+                background: linear-gradient($card-status-guard-color, $card-status-guard-color-secondary);
+            }
+
+            &__value {
+                width: $card-status-width;
+                height: 15px;
+                line-height: 15px;
+                font-size: 1.5em;
+                font-style: italic;
+            }
+
+            .card-status-border {
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                height: 0;
+                width: $card-status-width;
+                font-size: 0.5em;
+                color: $menu-background-color;
+                font-weight: bold;
+
+                &--top-hp {
+                    border-bottom: 10px solid $card-status-hp-color;
+                }
+
+                &--top-power {
+                    border-bottom: 10px solid $card-status-power-color;
+                }
+
+                &--top-guard {
+                    border-bottom: 10px solid $card-status-guard-color;
+                }
+
+                &--bottom-hp {
+                    border-top: 8px solid $card-status-hp-color-secondary;
+                }
+
+                &--bottom-power {
+                    border-top: 8px solid $card-status-power-color-secondary;
+                }
+
+                &--bottom-guard {
+                    border-top: 8px solid $card-status-guard-color-secondary;
+                }
+            }
+        }
+
+        .card-ability {
+            font-size: .75em;
+
+            div {
+                padding: 0;
+            }
+
+            &__icon {
+                text-align: center;
+            }
+
+            &__description {
+                margin-bottom: 0;
+            }
+        }
+
+        .card-battletype {
+            font-size: .75em;
+
+            &__title {
+                display: block;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .card-unit {
+        margin-top: .5em;
+
+        &__value {
+            padding-left: 0;
+        }
+
+        &__energy {
+            font-size: 4em;
+            text-align: center;
+        }
+    }
+
+    .card-separator {
+        border-bottom: 1px solid $modal-background-separator;
+        margin: .5em 0;
+    }
+
+}
