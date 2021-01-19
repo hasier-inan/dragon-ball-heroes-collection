@@ -10,16 +10,23 @@ body {
         background: $menu-background-color;
     }
 
-    .collection-items__item {
-        border-radius: 10px;
-
-        .item__image {
+    .collection-items {
+        &__item {
             border-radius: 10px;
-        }
-    }
 
-    .item-container__title {
-        margin-top: 1.5em;
+            .item__image {
+                border-radius: 10px;
+            }
+        }
+
+        &__filter-area {
+            position: fixed;
+            background-color: $filter-background-fixed-color;
+        }
+
+        .item-container__title {
+            margin-top: 1.5em;
+        }
     }
 
     .item-filter {
