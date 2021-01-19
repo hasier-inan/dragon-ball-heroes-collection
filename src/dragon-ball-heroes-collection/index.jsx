@@ -6,7 +6,10 @@ import {fetchCollection} from './cms-client';
 import CollectionItems from "collection-items";
 import {CATEGORIES} from "./categories";
 import _map from 'lodash/map';
+import _groupBy from 'lodash/groupBy';
 import _merge from 'lodash/merge';
+import _flatten from 'lodash/flatten';
+import _values from 'lodash/values';
 import Card from "./card";
 
 class DragonBallHeroesCollection extends React.Component {
@@ -18,6 +21,7 @@ class DragonBallHeroesCollection extends React.Component {
             displayModal: false,
             categories: CATEGORIES,
             cards: {},
+            characters: [],
         }
 
         this.loadAllCards();
@@ -35,7 +39,9 @@ class DragonBallHeroesCollection extends React.Component {
         )
             .then((response) => {
                 response.forEach(value => cards = _merge({}, cards, value));
-                this.setState({cards});
+
+                const characters = Object.keys(_groupBy(_flatten(_values(cards)), 'character'));
+                this.setState({cards, characters});
             });
     }
 
@@ -69,6 +75,7 @@ class DragonBallHeroesCollection extends React.Component {
         const {
             cards,
             categories,
+            characters,
         } = this.state;
 
         return (<CollectionItems
@@ -87,6 +94,7 @@ class DragonBallHeroesCollection extends React.Component {
             enableBreadcrumb={false}
             filterableProperties={{
                 rarity: {label: 'Rarity', values: ['★', '★★', '★★★', '★★★★', 'P', 'CP']},
+                character: {label: 'Character', values: characters}
             }}
             groupBy={'series'}
         />);
