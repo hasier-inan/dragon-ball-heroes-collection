@@ -88,6 +88,7 @@ class DragonBallHeroesCollection extends React.Component {
             filterableProperties={{
                 rarity: {label: 'Rarity', values: ['★', '★★', '★★★', '★★★★', 'P', 'CP']},
             }}
+            groupBy={'series'}
         />);
     }
 
