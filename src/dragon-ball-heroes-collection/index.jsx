@@ -85,6 +85,9 @@ class DragonBallHeroesCollection extends React.Component {
             defaultHeight={250}
             displayFullCollection={false}
             enableBreadcrumb={false}
+            filterableProperties={{
+                rarity: {label: 'Rarity', values: ['★', '★★', '★★★', '★★★★', 'P', 'CP']},
+            }}
         />);
     }
 

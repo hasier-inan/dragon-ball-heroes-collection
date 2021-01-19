@@ -13,8 +13,66 @@ body {
     .collection-items__item {
         border-radius: 10px;
 
-        .item__image{
+        .item__image {
             border-radius: 10px;
         }
+    }
+
+    .item-filter {
+        text-align: center;
+
+        &__select {
+
+            div {
+                &:hover {
+                    border: 0;
+                }
+
+                box-shadow: none;
+            }
+
+            > div > div {
+                border: 0;
+                background-color: $filter-background-color;
+            }
+
+            svg {
+                fill: $menu-background-color;
+
+                &:hover {
+                    fill: $filter-icon-hover;
+                }
+            }
+
+            span[class*='-indicatorSeparator'] {
+                background-color: $filter-separator-color;
+            }
+
+            div[class*='-placeholder'] {
+                color: $menu-background-color;
+            }
+
+            div[class*='-multiValue'] {
+                background-color: $modal-color-primary;
+            }
+
+            div[class*='-MenuList'] > div[class*='-option'] {
+                background-color: transparent;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: $filter-background-hover-color !important;
+                    color: $modal-color-primary;
+                }
+            }
+
+        }
+
+        @media (min-width: #{$width-xs}) {
+            &--rarity {
+                width: 200px !important;
+            }
+        }
+
     }
 }
