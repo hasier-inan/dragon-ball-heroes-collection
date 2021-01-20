@@ -81,7 +81,6 @@ class DragonBallHeroesCollection extends React.Component {
         return (<CollectionItems
             items={cards}
             categories={categories}
-            defaultCategory={categories[0].id}
             onItemClick={(card) => {
                 this.setState({
                     displayModal: true,
@@ -90,8 +89,6 @@ class DragonBallHeroesCollection extends React.Component {
             }}
             defaultWidth={172}
             defaultHeight={250}
-            displayFullCollection={false}
-            enableBreadcrumb={false}
             filterableProperties={{
                 rarity: {label: 'Rarity', values: ['★', '★★', '★★★', '★★★★', 'P', 'CP']},
                 character: {label: 'Character', values: characters}

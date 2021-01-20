@@ -27,6 +27,10 @@ body {
         .item-container__title {
             margin-top: 1.5em;
         }
+
+        &__breadcrumb {
+            font-size: 3em;
+        }
     }
 
     .item-filter {
