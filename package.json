@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"bootstrap": "^4.5.3",
-		"collection-items": "file:./../collection-items",
+		"collection-items": "github:hasier-inan/collection-items#v1.0.0",
 		"lodash": "^4.17.20",
 		"react": "^16.4.2",
 		"react-bootstrap": "^1.4.0",
