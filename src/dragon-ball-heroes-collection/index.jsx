@@ -1,6 +1,7 @@
 import "./index.scss";
 
 import React from "react";
+import ReactDOM from "react-dom";
 import Modal from 'react-bootstrap/Modal';
 import {fetchCollection} from './cms-client';
 import CollectionItems from "collection-items";
@@ -94,6 +95,8 @@ class DragonBallHeroesCollection extends React.Component {
                 character: {label: 'Character', values: characters}
             }}
             groupBy={'series'}
+            title={'Dragon Ball Heroes'}
+            footer={'by hasiermetal'}
         />);
     }
 
@@ -107,3 +110,7 @@ class DragonBallHeroesCollection extends React.Component {
 }
 
 export default DragonBallHeroesCollection;
+
+ReactDOM.render(React.createElement(() =>
+    <DragonBallHeroesCollection
+    />), window.DragonBallHeroesCollection);

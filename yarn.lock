@@ -2607,8 +2607,9 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-"collection-items@file:./../collection-items":
-  version "1.0.0"
+"collection-items@github:hasier-inan/collection-items#v1.0.2":
+  version "1.0.2"
+  resolved "https://codeload.github.com/hasier-inan/collection-items/tar.gz/c82693ee72dd5c009e542df78e2af722589e656d"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.32"
     "@fortawesome/free-solid-svg-icons" "^5.15.1"

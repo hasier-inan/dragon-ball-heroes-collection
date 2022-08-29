@@ -19,6 +19,12 @@ body {
             }
         }
 
+        &__content {
+            .container-overlay--show{
+                display: none;
+            }
+        }
+
         &__filter-area {
             position: fixed;
             background-color: $filter-background-fixed-color;
