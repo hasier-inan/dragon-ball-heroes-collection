@@ -2,6 +2,7 @@
 	"name": "dragon-ball-heroes-collection",
 	"version": "1.0.0",
 	"description": "Component that displays a list of items based on their properties",
+	"homepage": "https://hasier-inan.github.io/dbh-collection",
 	"main": "dist/dragon-ball-heroes-collection/index.js",
 	"module": "dist/dragon-ball-heroes-collection/index.js",
 	"author": "hasiermetal@gmail.com",
@@ -12,6 +13,7 @@
 	"dependencies": {
 		"bootstrap": "^4.5.3",
 		"collection-items": "github:hasier-inan/collection-items#v1.0.2",
+		"gh-pages": "^4.0.0",
 		"lodash": "^4.17.20",
 		"react": "^16.4.2",
 		"react-bootstrap": "^1.4.0",
@@ -25,7 +27,8 @@
 		"eslint": "eslint --ext .js,.jsx ./src/ --fix",
 		"sasslint": "sass-lint -v -q -i *module*/**/*.*",
 		"test": "nyc --all --check-coverage --reporter=text mocha ./src/**/*.test.jsx --opts mocha.opts --timeout 5000 --recursive --require ignore-styles -r jsdom-global/register ./src/setup.test.jsx --exit",
-		"report": "nyc report --reporter=html --reporter=lcov"
+		"report": "nyc report --reporter=html --reporter=lcov",
+		"gh-deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
