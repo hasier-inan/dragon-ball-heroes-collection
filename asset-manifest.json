@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/dbh-collection/static/css/main.e6ac0400.css",
-    "main.js": "/dbh-collection/static/js/main.610fdc3a.js",
-    "index.html": "/dbh-collection/index.html",
-    "main.e6ac0400.css.map": "/dbh-collection/static/css/main.e6ac0400.css.map",
-    "main.610fdc3a.js.map": "/dbh-collection/static/js/main.610fdc3a.js.map"
+    "main.css": "/dragon-ball-heroes-collection/static/css/main.e6ac0400.css",
+    "main.js": "/dragon-ball-heroes-collection/static/js/main.edb4bfb0.js",
+    "index.html": "/dragon-ball-heroes-collection/index.html",
+    "main.e6ac0400.css.map": "/dragon-ball-heroes-collection/static/css/main.e6ac0400.css.map",
+    "main.edb4bfb0.js.map": "/dragon-ball-heroes-collection/static/js/main.edb4bfb0.js.map"
   },
   "entrypoints": [
     "static/css/main.e6ac0400.css",
-    "static/js/main.610fdc3a.js"
+    "static/js/main.edb4bfb0.js"
   ]
 }
